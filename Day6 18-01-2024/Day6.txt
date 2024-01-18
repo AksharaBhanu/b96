@@ -1,0 +1,82 @@
+Locators- mechanism used in selenium to locate/search the element
+we have 8 locators
+1. tag name
+2. id
+3. name
+4. class name
+5. link text
+6. partial link text
+7. css selector
+8. xpath
+
+all are present in By class
+link text &  partial link text can be used to locate only link
+other locators can be used to locate any type element
+
+if locator is not matching with any of the element on the page then
+find_element method will throw no such element exception
+
+if locator is  matching with multiple elements then find element reutrns 1st matching element
+
+css selector:
+css: Cascading Style Sheets: color 
+syntax: tag[an='av']
+
+<a id="a1" name="n1" class="c1" title="click me" href="http://www.google.com">Google</a>
+
+ex: a[id='a1']    example for css selector--> css expression
+
+How to verify the css selector expression?
+1. open the page
+2. open the dev toolbar F12
+3. select html tree and press ctrl + f
+4. specify the css expression 
+    a. number of matches 
+    b. highlight html code
+    c. highlight element
+
+a[id='a1']--------------------> a[id="a1"]
+a[name='n1']
+a[class='c1']
+a[title='click me']
+a[href='http://www.google.com']
+
+in css selector we cant use text
+#---> id
+. --> class
+a[id='a1']----> a#a1 ----> tag is 'a' and id is 'a1'
+#a1---> id is 'a1', any tag
+
+
+a[class='c1']--> a.c1 tag is 'a' and class is 'c1'
+.c1 --->class is 'c1' . any tag
+
+a[id='a1'][class='c1']---> a#a1.c1
+
+xpath
+
+path of the element in html tree
+
+at the beginning we use .---> dot mean root element then we / --> child element
+./html/body/a
+
+specifying dot is not mandatory
+/html/body/a
+
+in xpath we can use index but index starts from 1 NOT FROM 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
