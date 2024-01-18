@@ -1,0 +1,59 @@
+WebElement
+--> anything present on the webpage such as textbox button link image....
+--> element is created using HTML
+---> tag attribute & text
+---> how to see the html code of the element--> inspect
+
+<input 
+class="RNmpXc"
+value="I'm Feeling Lucky" 
+aria-label="I'm Feeling Lucky" 
+name="btnI" 
+type="submit" 
+jsaction="trigger.kWlxhc" 
+data-ved="0ahUKEwif66jvxOSDAxXfr1YBHRc_DEoQ19QECBU">
+
+
+<a 
+href="https://www.google.com/setprefs?sig=0_Mgz74B1H84Cm2VB5BdHm0DR_TJI%3D&amp;hl=kn&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwif66jvxOSDAxXfr1YBHRc_DEoQ2ZgBCB0">ಕನ್ನಡ</a>
+
+before performing any action (click type select..) we should find the element
+to find the element we use locator
+
+<a
+ id="a1" 
+name="n1" 
+class="c1" 
+title="click me" 
+href="http://www.google.com"
+>Google</a>
+
+in selenium we have 8 locators all are present under By class
+1. By.TAG_NAME
+2. By.ID
+3. By.NAME
+4. By.CLASS_NAME
+5. By.LINK_TEXT
+6. By.PARTIAL_LINK_TEXT
+7. By.CSS_SELECTOR
+8. By.XPATH
+
+NoSuchElementException
+what it means--> specified element not found
+when do we get it--> if none of the element present on html page not matching with given locator
+
+if the specified locator not matching any of the element present the page we get NSEE
+if the specified locator is matching with multiple elemets then find_element method returns 1st matching element
+
+Bhanuprakashahk
+
+1.Bhanu
+2.prakash
+3.asha
+4.anu
+5.anup
+6.akash
+7.shah
+8.kash
+
+

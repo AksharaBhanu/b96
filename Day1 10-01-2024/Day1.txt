@@ -1,0 +1,156 @@
+Which is the class?
+Selenium---> Python basics Manual testing
+9481787493
+Bhanu Prakash 
+
+what selenium does?
+Selenium automates browsers. That's it!
+
+Selenium is Free and open source Web Application automation tool
+Free-->no need to pay money
+give me example software--> free
+  Notepad
+  gmail
+  whatsapp
+  FB
+  naukri
+  instangram
+  shaadi
+  X
+
+open source
+ can we see the source code 
+ can i download it
+ can i customize
+ can sell product & service
+
+example: unix-linux java python android
+
+all free s/w are OS?
+all OS are Free? yes
+
+where i can see the source code of selenium?
+https://github.com/SeleniumHQ/selenium
+
+Mobile app
+Desktop app
+Web Application---> open in browser (Chrome Firefox Edge Safari)
+
+example:
+fb.com
+gmail.com
+naukri.com
+shaadhi.com
+
+limitation of selenium?
+we can test only webapplication 
+
+automation tool
+
+tool--> software
+
+
+Manual testing
+1. open the browser
+2. enter the URL
+3. verify the page
+
+script--->Selenium:Run
+Selenium opens the browser
+Selenium enter the url
+selenium verify the page
+
+Automation testing
+
+why Automation?
+1. fast 
+2. reusable
+3. Quality
+4. restless
+
+Automation in daily life?
+--> washing machine
+--> oven
+--> Bike
+--> Car
+--> Email 
+--> phone
+
+Onsite: short term --> 40K  
+Home: Long term 
+
+initial investment is high
+long term
+Full Automatic washing --100% automation not possible 
+
+
+1. initial investment is high
+2. 100% automation not possible
+
+when do we go
+1. long term
+2. only repeating tasks
+
+Selenium Core
+Selenium RC
+Selenium WebDriver 4.16
+
+supports many languages
+1.C#
+2.Ruby
+3.Java
+4.Python
+5.JavaScript
+6.Go
+7.Haskell
+8. Perl
+9. PHP
+10. R
+11. Dart
+12. Pharo Smalltalk
+
+Automation tool:
+QTP(UFT) TestComplete Cyperss SilkTest Tosca Squish Ranorex Katalon Studio ..... RFT
+
+why Selenium?
+Free
+Open Source
+Easy to learn
+supports many languges
+supports many browser
+supports many OS 
+
+How to install selenium
+1. python---> python --version--> https://www.python.org/downloads/
+2. PyCharm--> https://www.jetbrains.com/pycharm/download/?section=windows
+
+Check PyCharm
+1. open PyCharm
+2. cerate a project
+
+
+How to install selenium
+1. open cmd---> pip install selenium
+
+2. to list all the packages--> pip list
+
+3. pip install --upgrade selenium
+
+4. pip uninstall selenium
+
+where pip
+pip --version
+
+
+IMP -installing selenium in PyCharm
+1. open pycharm
+2. File-->Settings
+3. Project:B96--> Python interpreter
+4. click +
+5. search 'selenium'
+6. click install package
+
+
+
+
+   

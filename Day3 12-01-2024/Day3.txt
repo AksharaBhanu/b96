@@ -1,0 +1,39 @@
+issues in selenium installation and opening browser
+1. no admin permission
+2. 3.12.1--> 3.10
+
+1. how to open the browser using selenium?
+   just create object of the respective Browser class
+   ex:
+       driver=Chrome()  #open chrome browser
+  Note: when we execute the code in IDE , it will auto close the browser
+
+2. what are the imp methods/features available under the Browser class (driver)
+   1) .get(url)---> enter the url & open the page
+   2) .close()--> closes the browser
+   3) .quit() ---> closes the browser
+   4) .back() ---> go back to previous page
+   5) .forward()--> go to next page
+   6) .refresh() --> reload the page
+   7) .maximize_window()
+   8) .minimize_window()
+   9) .fullscreen_window()
+   10).get_window_size()
+   11).set_window_size(width,height)
+   12).get_window_position()
+   13) .set_window_position(x,y)
+1. open chrome
+2. goto aksharatraining-pos
+------------------------------------------------------------------------------------------------
+New zoom link will be sent to u for registration 
+github account
+slack account
+
+python 3.10 version
+admin permission
+9481787493
+
+
+
+
+

@@ -1,0 +1,44 @@
+imp methods/features available under the Browser class (driver)
+
+   1) .get(url)---> enter the url & open the page
+   2) .close()--> closes the browser
+   3) .quit() ---> closes the browser
+   4) .back() ---> go back to previous page
+   5) .forward()--> go to next page
+   6) .refresh() --> reload the page
+   7) .maximize_window()
+   8) .minimize_window()
+   9) .fullscreen_window()
+   10).get_window_size()
+   11).set_window_size(width,height)
+   12).get_window_position()
+   13).set_window_position(x,y)
+   14).title
+   15).current_url
+   16).page_source
+   17).switch_to.active_element
+diff types of methods in the class
+instance method
+class method
+static method
+property method
+
+
+we can create our own webpage using html
+html--> hyper text markup language
+simple text file with .html extension
+<tag>
+3 comp
+tag
+attribute
+text
+
+<input class="oxd-input oxd-input--active" name="username" placeholder="Username" autofocus="" data-v-1f99f73c="">
+
+<button type="submit" class="oxd-button oxd-button--medium oxd-button--main orangehrm-login-button" data-v-10d463b7="" data-v-358db50f=""><!----> Login <!----></button>
+
+<p class="oxd-text oxd-text--p orangehrm-login-forgot-header" data-v-7b563373="" data-v-358db50f="">Forgot your password? </p>
+
+
+
+

@@ -1,0 +1,70 @@
+what is Selenium?
+Free & Open Source Web App Test Automation tool
+
+Latest version of Selenium
+4.16.0
+
+languages
+java python c# JS 
+
+req
+1. python 
+2. pip
+3. IDE--> PyCharm
+
+python is properly installed or not
+cmd--> python --version
+
+how to know the location of python?
+cmd--> where python
+C:\Users\user\AppData\Local\Programs\Python\Python312
+
+how to check pip is installed or not?
+pip --version
+
+how to update pip?
+python.exe -m pip install --upgrade pip
+
+how to install selenium in cmd ?
+pip install selenium
+
+how check selenium is installed or not?
+pip list
+
+How to run selenium from cmd
+1. open cmd
+2. type 'python' and press enter
+3. >>>from selenium.webdriver import Chrome  press enter
+4.>>> driver=Chrome() press enter
+5.>>> driver.get("http://www.google.com")
+6.>>> driver.close()
+
+1. open cmd 'Run As Administrator'
+2. type 'python' and press enter
+3. >>>from selenium.webdriver import Edge  press enter
+4.>>> driver=Edge() press enter
+
+---> 9481787493 
+
+PyCharm
+i am client place - internet is very bad- sorry
+open the PyCharm please
+1. File -> Settings -> Project:Name--> Python interpreter
+2. click  +
+3. search 'selenium'
+4. click install package
+5. close the popup after sucess msg
+6. create a package --> day2
+7. create a python file--> demo1.py
+8. write the below code & execute it
+from selenium.webdriver import Chrome
+driver=Chrome()
+
+
+
+
+
+
+
+
+
