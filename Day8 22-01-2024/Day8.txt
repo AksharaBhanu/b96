@@ -1,0 +1,72 @@
+path the element present in html tree
+types--> 2 types
+absoulte & relative xpath
+
+//tag[@AN1='AV1' and text()='tv' or not(@AN2='av2')]
+
+//tag[contains(@AN1,'av1') or contains(text(),'tv')]
+
+traversing 2 types fwd & bkwd traversing
+
+write xpath to identify cost of java
+ 
+//td[text()='100']-----------AS -By Vinay
+
+//td[text()='Java']/../td[2]--AS2 By Deepa
+
+
+if the element is completly dynamic can we contains function?
+no
+we use independent & dependent xpath 
+
+Ex: xpath for 'Cost of SQL'
+DE: Cost
+IE: SQL
+
+1. inspect IE & notedown its html code
+2. place the mouse pointer on html code of IE 
+3. move the mouse pointer in upward direction till it highlights both IE & DE
+4. note down its path (from IE to CP)
+5. use arrow keys to navigate from CP to DE
+6. write xpath from IE->CP->DE
+
+
+ 
+write xpath to identify 2nd subject
+DE: Sub
+IE: Sl No
+
+
+write xpath to identify  checkbox of API
+DE: CheckBox
+IE: API
+
+
+xpath for 23rd of Feb 2024 in makemytrip.com
+
+//div[text()='February 2024']/../../div[3]/div[4]/div[6]/div/p[1]
+
+//div[text()='February 2024']/../..//p[text()='23']
+
+//div[text()='January 2024']/../..//p[text()='30']
+
+//div[text()='January 2024']/../../div[3]/div[4]/div[6]/div/p[1]
+
+
+//div[text()='Apple iPhone 15 (Blue, 128 GB)']/../../div[2]/div[1]/div/div[1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
