@@ -1,0 +1,108 @@
+I & D xpath --> element is completly dynamic  dependency, duplicate
+
+
+//input---->
+
+//a---> all links
+//a[1]--> all links with local index 1
+//a[7]--> all links with local index 7
+(//a)[1]--> the 1st link
+(//a)[7]--> 7th link
+(//a)[last()]-->last link
+(//a)[last()-1]-->last but one
+(//a)[position()<4]--> matches with 1st 2nd & 3rd link
+(//a)[position()>7 and position()<11 ]--> link 8 9 10
+(//a)[position() mod 2=0]-- 2 4 6 8 ....
+
+(//td[text()='Java'])[2]/../td[3]
+
+TCS interview question asked-How many matches and which one - page contains 10 images
+(//img)[1]|(//img)[last()]
+
+(//img)[1 or last()]
+
+2 matches
+the 1st and the last image (1st & 10th)
+
+
+//th[text()='Subject']/following-sibling::th-> 2 cost & select
+
+//th[text()='Subject']/following-sibling::th[1] --> 1 cost
+//th[text()='Subject']/following-sibling::th[2]--1 Select
+
+//th[text()='Select']/preceding-sibling::th[3]
+
+//tag[@AN='AV']
+//tag[text()='tv']
+and or not
+//tag[contains(arg1,arg2)]
+arg1--> @AN or text()
+arg2--> value
+/
+/..
+ie--> cp---> de
+(//xpath)[index)
+following-sibling
+preceding-sibling
+
+//td[text()='API']/../preceding-sibling::tr[1]/td[2]
+
+
+xpath axes
+child::   /
+parent:: /..
+descendant:: //
+
+following-sibling
+preceding-sibling
+--------------------------------------------------
+Relative locator
+to left of
+to right of
+above
+below
+near
+--------------------------------------------------
+1. id
+2. name
+3. link text  
+4. xpath
+     @AN
+     text()
+     contains
+     IE-DE xpath
+     group index
+
+
+xpath types:DOM 
+2 types --> absolute & relative
+1. @AN
+2. text()
+3. and or not
+4. contains() ---> starts-with & ends-with
+5. traversing--> I & D xpath
+6. group index-->
+7. axes --> child parent descendant following-sibling preceding-sibling 
+
+
+
+find_element returns WebElement object
+
+WebElement Methods to perform Action on the element
+1. send_keys(input); -- type any input  --> abcd 123 CTRL+'c'
+2. clear() --> remove the value present in the input box 
+3. click()--> click on any element 
+4. submit()--> click on submit button only
+
+WebElement methods to get html content
+1.tag_name
+2.get_attribute(AN)
+3.text
+4.get_property(PN)
+
+
+
+
+
+
+
