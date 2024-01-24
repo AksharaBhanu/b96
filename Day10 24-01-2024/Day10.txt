@@ -1,0 +1,37 @@
+WebElement Methods to perform Action on the element
+1. send_keys(input); -- type any input  --> abcd 123 CTRL+'c'
+2. clear() --> remove the value present in the input box 
+3. click()--> click on any element 
+4. submit()--> click on submit button only
+
+WebElement methods to get html content
+1.tag_name
+2.get_attribute(AN)
+3.text
+4.get_property(PN)
+5.value_of_css_property(PN)
+
+WebElement Methods to perform Verification
+1. is_enabled()-- check if any given element is enabled(True) or disabled(False)
+2. is_selected()-- check if the 'checkbox/radio button/listbox option' is selected(True) or not (False)
+3. is_displayed()--> check if any given element is displayed(True) or  not (False)
+4. location--> to check x & y co-ordinates of the element
+5. size--> to check height & width of the element
+
+a.screenshot(path)--> supports only .png (Portable Network Graphics)
+
+How to run JS in browser manually
+1. goto the page
+2. open dev tool bar
+3. goto Console tab
+4. type JS code -> alert('hi') and press enter
+
+
+How to run JS in browser using selenium?
+using execute_script method of driver
+
+
+
+
+
+
