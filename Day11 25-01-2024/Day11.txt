@@ -1,0 +1,29 @@
+When we call any method of ActionChains class we must call perform method at the end
+
+right click--> context click --> we get 'Context Menu'
+
+ActionChains
+1. scroll_by_amount
+2. scroll_to_element
+3. scroll_from_origin
+4. double_click
+5. context_click
+6. drag_and_drop(src,target)
+7. click_and_hold
+8. move_to_element
+9. pause
+10.release
+11.perform
+
+uses of ActionChains class?? interview question
+1. scrolling
+2. mouse hover (drop down menu)
+3. right click (context menu)
+4. drag & drop 
+5. double click
+
+IFRAME:
+inserting one webpage inside another webpage--> embeded webpage---> using <iframe>
+
+<button aria-label="Stay signed out" class="M6CB1c rr4y5c" jsname="ZUkOIc" jslog="71121; track:click;" data-dismiss="n">Stay signed out</button>
+//button[text()='Stay signed out']
