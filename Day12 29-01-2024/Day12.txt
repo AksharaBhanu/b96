@@ -1,0 +1,26 @@
+Popup
+1. frame poup-->
+    we can inspect and we get 'view frame source option'
+    handle-> driver.switch_to.frame 
+
+2. Alert popup-->
+     also called as 'javascript popup
+     we cant inspect this popup
+     displayed below the addressbar and at the middle
+     handle it--> driver.switch_to.alert
+		  alert.text--> get msg
+  		  alert.accept()-> click OK
+		  alert.dismiss()--> click cancel
+   Note: If alert popup is not present at any step we get NoAlertPresentException
+
+3. File Upload popup
+       we cant inspect it
+       handle it: for the browser/choose file button, use send_keys method insteadof click
+                 and specify path of the file to be uploaded as argument for  send_keys method
+	Note: send_keys - will support only absoulte path, hence we convert relative path into absolute path using os.path.abspath method
+4. file download 
+      we dont get popup
+
+5. HTML popup
+        we can inspect it
+        handle it: using find_element

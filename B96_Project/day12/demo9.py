@@ -1,0 +1,23 @@
+import time
+from selenium.webdriver import Chrome
+from selenium.webdriver.common.by import By
+import os
+
+driver = Chrome()
+driver.get("https://www.makemytrip.com/")
+driver.maximize_window()
+time.sleep(2)
+driver.find_element(By.XPATH,"//span[text()='Departure']").click()
+time.sleep(2)
+date_xpath="//div[text()='January 2025']/../..//p[text()='29']"
+for i in range(12):
+    try:
+        driver.find_element(By.XPATH,date_xpath).click()
+        print('Date is selected')
+        break
+    except:
+        print('Date is not present , hence clicking Next',i)
+        driver.find_element(By.XPATH,"//span[@aria-label='Next Month']").click()
+        time.sleep(1)
+
+time.sleep(5)
