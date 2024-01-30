@@ -1,0 +1,10 @@
+current_window_handle		window_handles
+
+it return WH of current 	 return WH of all the browsers
+browser
+
+str				list
+
+close and quit
+close method closes only current browser
+quit method closes all the browsers
