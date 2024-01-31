@@ -1,0 +1,25 @@
+NoSuchElementException
+1. wrong locator type
+2. wrong locator value
+3. element is inside frame
+4. element is outside frame
+5. inside diff browser
+6. inside diff tab
+
+Popup
+1. frame popup
+2. alert /javascript popup
+3. file upload
+4. html popup/hidden division popup
+5. child window /child browser
+6. notification popup
+
+find_element				find_elements
+return type: WebElement			list (of WebElement)
+
+if locator is not matching		returns empty list
+it throws NSEE
+
+id name linktext xpath			xpath
+
+handle single element			handle multiple elements
