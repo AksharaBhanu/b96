@@ -1,0 +1,34 @@
+Handling listbox
+1. drop down list
+2. combo box
+3. single select list box
+
+Note:
+listbox is created using <select> tag
+listbox items are created using <option> tag
+
+to Handle listbox we use Select class
+methods
+1.select_by_index(i)
+2.select_by_value("value")
+3.select_by_visible_text("text")
+
+if any of these arg is invalid we get NSEE
+both value and text are case sensitive
+
+4. options  -returns all the options present in list box (list of WebElement)
+
+5.is_multiple--.True (multi select listbox) None (single select listbox)
+
+6.deselect_by_index(i)
+7.deselect_by_value("value")
+8.deselect_by_visible_text("text")
+9.deselect_all()
+
+if any of these arg is invalid we get NSEE
+both value and text are case sensitive
+deselct method works only on multi select listbox
+
+first_selected_option
+all_selected_options
+options
