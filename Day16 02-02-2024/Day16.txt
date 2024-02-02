@@ -1,0 +1,16 @@
+NoSuchElementException
+1. wrong locator type
+2. wrong locator value
+3. inside frame
+4. outside frame
+5. diff browser
+6. diff tab
+7. synchronization
+
+selenium will be fast & app will be slow
+process of matching selenium execution speed with app --synchronization
+solution
+1. time.sleep(n)
+2. driver.implicitly_wait(10)  default time: 0
+    a. 10s --> wait for 10s --wait upto 10s
+    b. used by all find_element & find_elements statements
