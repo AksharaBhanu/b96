@@ -1,0 +1,128 @@
+matching selenium speed with app -. sync
+1. implicit wait
+2. explicit wait
+
+WebDriverWait is also called as explicit wait- becuase we need to mention the waiting condition explicitly
+
+NoSuchElementException how do u handle it?
+solution
+1. driver.implicitly_wait(10)----  default--0s
+2. Explicit wait (WebDriverWait)	----  default NA
+3. time.sleep(3)	----  default NA
+4. Custome wait		----  default NA
+5. set_page_load_timeout---- default-- 5Min
+     used by get back forward refresh
+6. set_script_timeout -----default-- 30s
+   used by execute_script (java script executor
+
+
+Dif b/w IW & EW
+
+ IW							EW
+1. waiting condition is built in		1. we have to specify waiting condition explicitly using
+ (we do not specify waiting condition			expected_conditions (predicate)
+   explicitly)
+
+2. we handle sync of all find_element & 	2. we handle sync of any method (but only one at a time)
+  find_elements methods
+
+3. after the time we get NSEE/EL		3. we get TimeOutException
+
+4. we specify only once				4. multiple times
+
+
+deafult polling period (poll_frequency)?
+500ms 0.5s
+
+how to change it?
+we can do this in Explicit wait
+ex: wait=WebDriverWait(driver,10,1)
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Compatability testing - test in diff env ---> Diff OS & Diff Browser
+
+my laptop
+OS: Win11
+Browser: Chrome
+
+Manager says test it in this new Mac laptop
+Note: everything working in my laptop
+
+1. install python
+2. pycharm
+3. selenium
+4. copy paste all scripts and files
+5. execute it
+6. analyse it
+
+
+20 system 
+copy : 20 times
+click run: 20 times
+results: 20 results 
+
+Selenium Grid
+1. for CT
+2. 1 copy
+3. one click
+4. excutes on 20 systems
+5. 1 Res
+
+2 types of systems
+1. local system--Automation Script, click run , result
+2. remote system-- execution (Open browser , enter url test...)
+
+
+Remote System for rent -- from https://saucelabs.com/
+
+Steps: Login to saucelabs.com using gmail account
+
+
+Limitation : Paid servce & our application should be made public 
+
+We can setup selenium grid in our company systems
+1. JDK  (how to check java --version)
+2. Selenium server jar file
+3. browser
+
+
+run below cmd to start selenium grid in remote system
+java -jar selenium-server-4.17.0.jar standalone
+
+msg we get 'Started Selenium Standalone'
+we also get URL of the grid http://192.168.29.187:4444
+
+
+Local System
+1. python
+2. PyCharm
+3. Automation script & data & other supporting files
+4. we click run 
+5. we get result
+
+Remote System
+1. JDK
+2. selenium server jar file
+3. cmd --> java -jar selenium-server-4.17.0.jar standalone
+4. Browser
+5. action: Open browser enter url perform action verify....
+
+one Local System and multiple remote system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
