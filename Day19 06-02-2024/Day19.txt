@@ -1,0 +1,57 @@
+Page Object Model
+1. Design pattern used in Automation
+2. declaration , initialization & utilization
+3. For every page we create respective page class (POM class)
+4. Repository class 
+
+2 types of classes
+1. POM class
+2. test class 
+
+Number of POM class will be same as number of Pages
+Number of TC will be same as number of Manual test cases
+
+which one we run?
+we can run only Test class
+
+Assume that we have 20 Webpages--> FT IT ST +ve -ve..->200 TC
+
+POM class-20 
+TC -- 200
+how to run
+1. open the test case
+2. click run
+3. wait till the execution
+4. result 
+
+Automate execution
+1. click run only once
+2. it should automatically run all tc 1-1 
+3. result
+
+pytest -- unit testing tool 
+unit
+junit
+testng
+
+pip install pytest
+
+1. function or method name should start with 'test'
+2. to execute test from cmd-> right click on package -> open in ->terminal
+3. file name also should start with 'test'
+4. to see print msg--> pytest -s
+5. pytest -vs   verbose (file name function name and status
+6. list only the executable test (dont actually run it)
+   pytest --collect-only
+7.pytest --> execute all module all class all functions
+8.pytest test_module1.py -vs--> execute all classes and all functions present in test_module1
+9.pytest test_module1.py::Test_A -vs
+10.pytest test_module1.py::Test_A::test1 -vs
+11.pip install pytest-html
+12. pytest -vs --html myreport.html
+13. @pytest.mark.skip    unconditional without reason
+14. @pytest.mark.skip(reason="i dont want to run this")  unconditional  with reason
+15. @pytest.mark.skipif(a>b,reason="i dont want to run this") conditional with reason
+
+
+
