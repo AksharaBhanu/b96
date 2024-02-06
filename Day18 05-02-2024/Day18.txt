@@ -1,0 +1,14 @@
+test data?
+input required to test the application
+
+store the test data in some files/external source
+ex: 
+1. excel
+2. csv
+3. JSON
+4. XML
+5. DB (SQL)...
+
+How to read data from excel?
+using 'openpyxl' package
+
