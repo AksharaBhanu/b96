@@ -1,0 +1,59 @@
+pip install pytest
+
+1. function or method name should start with 'test'
+2. to execute test from cmd-> right click on package -> open in ->terminal
+3. file name also should start with 'test'
+4. to see print msg--> pytest -s
+5. pytest -vs   verbose (file name function name and status
+6. list only the executable test (dont actually run it)
+   pytest --collect-only
+7.pytest --> execute all module all class all functions
+8.pytest test_module1.py -vs--> execute all classes and all functions present in test_module1
+9.pytest test_module1.py::Test_A -vs
+10.pytest test_module1.py::Test_A::test1 -vs
+11.pip install pytest-html
+12. pytest -vs --html myreport.html
+13. @pytest.mark.skip    unconditional without reason
+14. @pytest.mark.skip(reason="i dont want to run this")  unconditional  with reason
+15. @pytest.mark.skipif(a>b,reason="i dont want to run this") conditional with reason
+16. assert 
+17. if the test is faild will pytest stops the execution? No
+18. can we stop pytest if there is any test failuare
+ pytest test_module1.py -vs --maxfail=1  -->stop after 1st fail
+ pytest test_module1.py -vs --maxfail=2  ->stop after 2nf fail
+
+19. how to rerun only failed test
+     pytest test_module1.py -vs --lf
+
+20. how do u re-run all test but 1st failed and then passed one?
+ 	pytest test_module1.py -vs --ff
+
+21. what is default execution order of the test?
+   top to bottom
+
+22. how do execute test in required order 
+    order
+    pip install pytest-ordering
+     
+    above every test mention @pytest.mark.run(order=n)
+
+23. how do u execute delete customer after create customer is PASSED
+pip install pytest-dependency
+
+24. how do u execute test mulitple times with diff data 
+     using parameter
+
+25. how do u execute only required tests?
+     using keyword 
+     -k customer  --> execute all the test where test name contains 'customer'
+      pytest test_module6.py -vs -k 'product or customer' 
+     
+       pytest test_module6.py -vs -k 'not  customer'
+
+      pytest test_module6.py -vs -k 'delete or customer'
+  
+      pytest test_module6.py -vs -k 'delete and customer'
+
+26. how to create custome group --> marker --> pytest.ini-> specify the markers
+    use -m -->ex:  pytest test_module7.py -vs -m 'not user'       we can use and or not
+
