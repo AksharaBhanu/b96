@@ -1,0 +1,8 @@
+pytest-xdist
+
+scope:
+function
+class
+module
+package
+session
