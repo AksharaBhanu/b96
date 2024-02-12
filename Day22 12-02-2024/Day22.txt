@@ -1,0 +1,31 @@
+1. Create new project with the name B96AFW
+2. goto python interpreter of the project
+3. ensure that following packges are present
+   a.selenium
+   b.openpyxl
+   c.pytest
+   d.pytest-ordering
+   e.pytest-depedency
+   f.pytest-xdist
+   g.pytest-html
+   h.----------------------
+4. create a package 'generic' under the project
+5. create base_file.py-> class BaseTest-> pre & post condition method
+6. make them as fixture
+7. create script package and create test_script1.py-> class Test1(BaseTest)
+8. create a test method inside Test1 class
+9. execute Test1
+
+
+
+#how to read property file
+#property file extention is .properties
+#it is a flat file (text file) used to store data as key-value pair
+from pyjavaproperties import Properties
+
+p=Properties() #create object
+p.load(open('../config.properties')) #open the file
+v=p['BROWSER'] #get the value
+print(v)
+v=p.getProperty('ITO')
+print(v)
