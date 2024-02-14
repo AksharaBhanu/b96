@@ -1,0 +1,140 @@
+How to execute the framework
+--> pytest -v alluredir=./result
+
+What is does?
+1. collect all the tests
+2. and start the execution one by one
+3. every test extends BaseTest which contains pre& post condition
+4. pre-condition
+    a.read data present in property file 
+    b check if it has to use grid or local system
+    c. check if it has to open chrome/firefox/edge...
+    d. open the specified browser in req env
+    e. enter the url
+    f. set ITO & ETO
+    g. maximize the browser
+5. execute test.......
+6. post-condition--> close the browser
+7. generate allure repot
+
+How to view the allure report
+allure server ./result
+
+Uploading AFW to github
+precondition
+1. have github account
+2. git.exe should be installed in our system
+
+
+1. login to github
+2. profile---> settings
+3. Developer settings
+4. Personal access tokens (classic)
+5. generate new token(classic)
+6. add the note, select all checkbox,click generate token
+7.copy paste the token to a notepad
+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
+8. notedown your github url ex:https://github.com/AksharaBhanu
+9. in pycharm goto VCS->enable versions control system
+10.git->github->share project on github
+11. click add account --> using token ->spcify token->click share
+
+How to convert Manual testcase into automation script
+1.do we automate all test cases?
+   No, we automate only regression test cases
+
+2.how do u know which test case is regression?
+  - manual testing team should inform
+
+3. are u going to automate smoke test case?
+   yes- only if it is part of regression suite
+
+4. are u going to automate -ve test cases?
+  yes--> only if it is part of regression suite
+
+5.How do u automate
+   1. execute the test case manually -understand the test case , app data.. (system study) 
+   2. after executing TC , notedown 3 info
+      a.page
+      b.element
+      c.action
+	ex
+    
+page 			element			action
+1.LoginPage		username		enter (admin)
+2.LoginPage		password		enter (pointofsale)
+3.LoginPage		go button		click
+4.HomePage		logout			verify that it is displayed
+
+
+
+   3. for every page create respecitive POM class
+	a. create page package (if not present)
+        b. create a python file, ex:login_page.py
+        c. create a class inside the python file ex: class LoginPage
+	d. inside the class 
+		i. declaration  ex:__username=(By.ID,'input-username')
+		ii. initialization ex: using constructor ex:self.driver=driver
+		iii. utilization ex: 
+			 def enter_username(self,un):
+       				 self.driver.find_element(*self.__username).send_keys(un)
+
+	Note:
+		POM class will not extend BaseTest
+		POM class constructor will always take driver as argument
+		do not use assert in POM class	
+
+   4. for every test case create respective Test Script
+		a.create a python file under script package ex: test_valid_login.py
+		b create a class inside the file ex: class Test_ValidLogin(BaseTest):
+		c. inside the class create a test
+		d. inside the test specify manual test case steps as comments
+                e. below each comment , call required POM class methods
+
+	Note:
+		test class will always extends BaseTest
+ 		to access driver/ wait use self
+	 	use assert 
+   5. Data drive the script
+	a. create a sheet in input.xlsx
+        b. sheet name should be same as respective testcase name/id
+	c. 1st row should be header
+	d. test data should be present from 2nd row
+	e. read the data using Excel.get_data method in the test
+
+ex:
+  TestCase1:ValidLogin
+  precondition: login page
+  steps
+  #1. enter valid username
+  #2. enter valid password
+  #3. click go
+  #4. verify that homepage is displayed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+pip install allure-pytest
+
+pytest -vs --alluredir=./result
+
+allure serve ./result
+------------to see the message in allure report dont use -s------------
+pytest -v --alluredir=./result
+allure serve ./result
