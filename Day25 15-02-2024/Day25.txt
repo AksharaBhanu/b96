@@ -1,0 +1,57 @@
+  TestCase2:InvalidLogin
+  precondition: login page
+  steps
+  #1. enter invalid username
+  #2. enter invalid password
+  #3. click go
+  #4. verify that Err Msg is displayed
+
+How do u automate
+   1. execute the test case manually -understand the test case , app data.. (system study) 
+   2. after executing TC , notedown 3 info
+      a.page
+      b.element
+      c.action
+	ex
+    
+page 			element			action
+1.LoginPage		username		enter (abcd)
+2.LoginPage		password		enter (xyz)
+3.LoginPage		go button		click
+4.LoginPage		err msg			verify that it is displayed
+
+
+
+   3. for every page create respecitive POM class
+	a. create page package (if not present)
+        b. create a python file, ex:login_page.py
+        c. create a class inside the python file ex: class LoginPage
+	d. inside the class 
+		i. declaration  ex:__username=(By.ID,'input-username')
+		ii. initialization ex: using constructor ex:self.driver=driver
+		iii. utilization ex: 
+			 def enter_username(self,un):
+       				 self.driver.find_element(*self.__username).send_keys(un)
+
+	Note:
+		POM class will not extend BaseTest
+		POM class constructor will always take driver as argument
+		do not use assert in POM class	
+
+   4. for every test case create respective Test Script
+		a.create a python file under script package ex: test_valid_login.py
+		b create a class inside the file ex: class Test_ValidLogin(BaseTest):
+		c. inside the class create a test
+		d. inside the test specify manual test case steps as comments
+                e. below each comment , call required POM class methods
+
+	Note:
+		test class will always extends BaseTest
+ 		to access driver/ wait use self
+	 	use assert 
+   5. Data drive the script
+	a. create a sheet in input.xlsx
+        b. sheet name should be same as respective testcase name/id
+	c. 1st row should be header
+	d. test data should be present from 2nd row
+	e. read the data using Excel.get_data method in the test
