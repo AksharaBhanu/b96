@@ -1,0 +1,79 @@
+__init__.py
+1. dir & python package
+2. package initialization code
+3. package level variable
+4. short cut for import
+5. hide functions or class.
+6. alias for the class/function
+-------------------------------------------------------
+Selenium WebDriver Architecture
+1. name of the package: selenium
+2. subpackage name:webdriver
+selenium/webdriver/chrome/webdriver.py---> class WebDriver(ChromiumDriver)  driver=Chrome()
+selenium/webdriver/edge/webdriver.py--->class WebDriver(ChromiumDriver)
+selenium/webdriver/chromium/webdriver.py--->class ChromiumDriver(RemoteWebDriver)
+selenium/webdriver/firefox/webdriver.py---> class WebDriver(RemoteWebDriver)
+selenium/webdriver/ie/webdriver.py--->class WebDriver(RemoteWebDriver)
+selenium/webdriver/safari/webdriver.py--->class WebDriver(RemoteWebDriver)
+selenium/webdriver/remote/webdriver.py class WebDriver(BaseWebDriver)
+class BaseWebDriver(ABCMeta)
+
+
+content of __init__.py which is present in webdriver package
+from .chrome.options import Options as ChromeOptions  # noqa
+from .chrome.service import Service as ChromeService  # noqa
+from .chrome.webdriver import WebDriver as Chrome  # noqa
+from .common.action_chains import ActionChains  # noqa
+from .common.desired_capabilities import DesiredCapabilities  # noqa
+from .common.keys import Keys  # noqa
+from .common.proxy import Proxy  # noqa
+from .edge.options import Options as EdgeOptions  # noqa
+from .edge.service import Service as EdgeService  # noqa
+from .edge.webdriver import WebDriver as ChromiumEdge  # noqa
+from .edge.webdriver import WebDriver as Edge  # noqa
+from .firefox.firefox_profile import FirefoxProfile  # noqa
+from .firefox.options import Options as FirefoxOptions  # noqa
+from .firefox.service import Service as FirefoxService  # noqa
+from .firefox.webdriver import WebDriver as Firefox  # noqa
+from .ie.options import Options as IeOptions  # noqa
+from .ie.service import Service as IeService  # noqa
+from .ie.webdriver import WebDriver as Ie  # noqa
+from .remote.webdriver import WebDriver as Remote  # noqa
+from .safari.options import Options as SafariOptions
+from .safari.service import Service as SafariService  # noqa
+from .safari.webdriver import WebDriver as Safari  # noqa
+from .webkitgtk.options import Options as WebKitGTKOptions  # noqa
+from .webkitgtk.service import Service as WebKitGTKService  # noqa
+from .webkitgtk.webdriver import WebDriver as WebKitGTK  # noqa
+from .wpewebkit.options import Options as WPEWebKitOptions  # noqa
+from .wpewebkit.service import Service as WPEWebKitService  # noqa
+from .wpewebkit.webdriver import WebDriver as WPEWebKit  # noqa
+-------------------------------------------------------------------------------------------------
+1. in Selenium for every browser we have respective class called WebDriver inside respective browser package
+2. both chrome and edge WebDriver inherits from ChromiumDriver
+3. ChromiumDriver inherits from RemoteWebDriver
+4. Firefox, Safari , IE WebDrivers inherits from RemoteWebDriver
+5. RemoteWebDriver inherits from BaseWebDriver
+6. BaseWebDriver inherits from ABCMeta
+
+Protocol used is 'w3c' in Selenium 4
+in Selenium 3--JSON Wire Protocol
+
+next??
+1. list out all imports from Day1
+2. list out all packages required pip install 
+3. mock interview -> Q + A-- 3mock 
+4. https://calendly.com/aksharatraining/30min link to book mock interview
+5. CV preparation - Sample Cv --> 1-1 -> 3- 4 round
+6. Some test case POS application --> automate it - help u
+7. info@aksharatraining.com ---> batch code and phone number
+8. 9481787493
+
+
+
+
+
+
+
+
+

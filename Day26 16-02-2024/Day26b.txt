@@ -1,0 +1,173 @@
+1. we execute the framework using cmd-> pytest -v --alluredir=result
+2. it will collect all the tests (filename,classname & method should starts with test)
+3. in our framework every test class inherits BaseTest class
+4. BaseTest class contains pre & post condition fixtures
+5. 1st it will execute pre_condition
+    a. find the location of the basefile as ref (so that we can construct other file paths)
+    b. read the config.properties content
+         p=properties() p.load(open(path))  v=p['key']
+
+    c. check whether system should be local or remote (grid)
+    d. check whether browser is firefox or chrome
+    e. open the specified browser in the given system
+	self.driver=Chrome()
+    f. enter the url
+	self.driver.get(app_url)
+    g. set ITO & ETO
+	self.driver.implicitly_wait(ito)
+	self.wait=WebDriverWait(self.driver,eto)
+    h. maximize the browser
+	self.driver.maximize_window()
+
+6. after executing pre-condition it will goto test execution
+   a.read test data from excel using utility lib
+	 un=Excel.get_data( self.xl_path,'sheet',row,col)
+
+   b. call the POM class method as per test case steps  to perfom the action on the app
+	 login_page = LoginPage(self.driver)
+        login_page.enter_username(un)
+
+   c. assert the result (PASS/Fail)
+	assert result
+
+7. after executing the test , it will goto post_condtion
+   a. close the browser
+	self.driver.close()
+
+8. it will execute all the remaining test (as step 5 6 & 7) based or 'order'
+
+9. generate the report
+
+10. to view the report -> allure serve result
+
+ 
+What type framework
+pytest framework
+pom framework
+method driven framework
+data driven framework
+
+Hybrid framework
+
+When do execute the Framework?
+when we get the new build
+
+When do u get build?
+depends on many factors  
+
+How to execute AFW automatically when we get build
+jenkins
+
+
+How to integrate AFW with jenkins
+ precondition
+1. AFW if present in github and we have its URL
+https://github.com/AksharaBhanu/B96AFW.git
+
+2. jenkins installed and configured and we know URL , un & pwd
+http://localhost:8080/ --> bhanu bhanu123
+
+3. dev build name
+
+4. use grid 
+
+5. python should be installed in jenkins server along with req packages (selenium pytest openpyxl pyjavaproerpties pytest-ordering...)
+C:\Users\user\AppData\Local\Programs\Python\Python312\python.exe
+
+Steps to integrate AFW with jenkins
+1. login to jenkins
+2. click on new item
+3. specify the name
+4. click on Freestyle project
+5. click ok
+6. click on SCM
+7. select git radio button
+8. paste the github url (Repository URL) and select the credentials (github un & token)
+9. click build triggers
+10. under Build Steps select 'Custom Python Builder'
+11. specify path of python under HOME
+12. specify the Command-> pytest -vs
+13. click save
+
+
+
+How to execute AFW from Jenkins
+1. manually
+   a. login to jenkins
+   b. open the AFW project
+   c. click on build now
+
+Note: for every execution we get new link under build history
+      click on the link and console output
+
+
+2. schedule 
+      a. login to jenkins
+   	b. open the AFW project
+	c. click configure
+ 	d. click build triggers
+	e. select Build periodically
+	MINUTE HOUR DOM MONTH DOW
+        10 20 16 02 5 
+        30 09 * * * --> everyday 9.30AM 
+      	0 18 * * 1-5--> every weekday 6pm
+
+3. when we get new build from  dev team
+    a. login to jenkins
+   	b. open the AFW project
+	c. click configure
+ 	d. click build triggers
+	e. select 'Build after other projects are built'
+        f. specify name of Dev build ex:B96DevBuild
+        g. click save
+
+
+allure report
+precondition --> allure plugin and allure cmdline installed in jenkins server
+ 	a. login to jenkins
+   	b. open the AFW project
+	c. click configure
+	d. click Build Steps (Custom Python Builder)
+	e. Home should be python path
+	f. Nature should be 'Shell'
+	g. command should be 'pytest -v --alluredir=allure-results'
+	h. under Post-build Actions-> select Allure Report
+	i. path -> 'allure-results'   (it should be folder name specified at the end of step 'g' above
+	j. click save
+
+
+-----------------------------------------------------------------------------------------
+1. folder --> dir
+2. python folder --> package--> import the modules and classes
+3. package--> folder contains __int__.py
+
+we can write initialization code for package
+to use a common variable (shared) accross the package
+we can provide shortcut for import
+we can decide which shortcut to make it public 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
